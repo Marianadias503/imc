@@ -1,66 +1,79 @@
-body{
-  background-color:#5f7534 ;
+body {
+  background-color: #5f7534;
+  margin: 0;
+  padding: 0;
 }
-.grid{
+
+.grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  
+  margin-bottom: -2rem;
 }
-.calculadora{
+
+.grid .calculadora {
   font-family: "Chau Philomene One", sans-serif;
-  color:#fbb03b ;
+  color: #fbb03b;
   box-sizing: border-box;
   display: flex;
- 
-  font-size: 1.5rem;
-  margin-left: -4rem;
-  margin-top: 7rem;
-
-
+  font-size: 2rem;
+  margin-top: 14rem;
+  margin-left: -8rem;
 }
 
 main {
-  
   display: flex;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: auto;
   justify-content: center;
   align-items: center;
+  margin-bottom: 0;
+  padding: 20px;
+  box-sizing: border-box;
 }
-.logo{
 
+.logo {
   padding: 0;
   margin: 0;
-  width: 80%;
-
-
+  width: 100%;
+  max-width: 300px;
+  margin-left: 22rem;
+  margin-top: 1rem;
 }
-.descricao{
+
+.descricao {
   font-family: "Inter", sans-serif;
   color: white;
-  font-weight:800;
-  width: 100%;
- border: 1px solid red ;
- margin-bottom: -11rem;
- 
+  font-weight: 800;
+  width: 50%;
+  margin-bottom: 1.5rem;
+  margin-left: 25rem;
+  margin-top: 3rem;
+  text-align: center;
 }
-.problemas{
+
+.problemas {
   margin-left: 1rem;
+  text-align: center;
 }
-.desnutricao{
-  margin-left: 8rem;
+
+.desnutricao {
+  margin-left: 0;
+  text-align: center;
 }
+
 .container {
   display: flex;
   flex-direction: column;
   background: #fbb03b;
-  width: 400px;
-  height: 600px;
+  width: 90%;
+  max-width: 400px;
+  height: auto;
+  padding: 20px;
   align-items: center;
   justify-content: space-evenly;
   border-radius: 20px;
   box-shadow: 0 0 10px black;
-  padding: 20px; 
+  box-sizing: border-box;
 }
 
 .titulo {
@@ -76,23 +89,25 @@ main {
 .input {
   display: flex;
   width: 100%;
-  height: 50px;
   justify-content: space-between;
   align-items: center;
 }
 
 .input input {
-  width: 200px;
+  width: 100%;
+  max-width: 200px;
   height: 50px;
   border-radius: 5px;
+  margin-bottom: 1rem;
   border: none;
   outline: 0;
-  font: bold 1.5rem serif;
+  font: bold 1rem serif;
   text-align: center;
 }
 
 .input label {
-  font: bold 1.5rem serif;
+  font: bold 1rem serif;
+  margin-right: 10px;
 }
 
 button {
@@ -104,6 +119,7 @@ button {
   outline: none;
   border-radius: 5px;
   cursor: pointer;
+  margin-top: 10px;
 }
 
 .result {
@@ -111,80 +127,111 @@ button {
   margin-top: 20px;
   align-items: center;
   width: 100%;
-  height: 150px;
+  height: auto;
+  padding: 20px;
   border-radius: 5px;
   font: italic 1.5rem serif;
   box-shadow: 0px 0px 10px black;
   background: #000;
   color: rgb(255, 198, 0);
-  padding: 20px;
   box-sizing: border-box;
-
 }
 
-/* Media Queries para Responsividade */
+.imgButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-@media (max-width: 600px) {
-  .container {
-      width: calc(100% - 9rem); 
-      height: auto; 
-      padding: 2rem; 
+.imgLink {
+  margin-left: 10rem;
+  width: 80%;
+  padding-top: 0;
+}
+
+/* Responsividade para tablets */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr;
   }
 
-  .titulo {
-      font-size: 2rem;
-      height: auto; 
+  .grid .calculadora {
+    font-size: 1.8rem;
+    margin-top: 8rem;
+    margin-left: -4rem;
   }
 
-  .input {
-      width: 100%;
-      height: auto;
-      flex-direction: column;
-      margin-bottom: 10px;
+  .logo {
+    margin-left: 10rem;
   }
 
-  .input label {
-      font-size: 1.2rem;
+  .descricao {
+    width: 80%;
+    margin-left: 5rem;
+    font-size: 1.2rem;
   }
 
-  .input input {
-      width: 100%;
-      height: 40px;
-      font-size: 1.2rem;
-  }
-
-  button {
-      width: 100%;
-      height: 45px;
-      font-size: 1rem;
-  }
-
-  .result {
-      width: 100%;
-      height: auto; 
-      font-size: 1.2rem;
+  .imgLink {
+    margin-left: 5rem;
   }
 }
 
-@media (max-width: 400px) {
-  .titulo {
-      font-size: 1.8rem;
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
   }
 
-  .input label {
-      font-size: 1rem;
+  .grid .calculadora {
+    font-size: 2rem;
+    margin-top: 4rem;
+    margin-left: 8rem;
+    padding-top: 10rem;
+
+    
   }
 
-  .input input {
-      font-size: 1rem;
+  .logo {
+    margin-left: 0;
+    margin-top: 1rem;
+    max-width: 250px;
+    padding-top: 3rem;
+   
+  }
+  
+  .descricao {
+    width: 100%;
+    margin-left: 0;
+    font-size: 1rem;
+    text-align: center;
   }
 
-  button {
-      height: 40px;
-      font-size: 0.9rem;
+  .imgLink {
+    margin-left: 0;
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid .calculadora {
+    font-size: 1.2rem;
+    margin-top: 1.3rem;
+    margin-left: 0;
+    text-align: center;
   }
 
-  .result {
-      font-size: 1rem;
+  .logo {
+    margin: 0 auto;
+    max-width: 200px;
+  }
+
+  .descricao {
+    font-size: 0.9rem;
+    margin-top: 2rem;
+  }
+
+  .imgLink {
+    margin: 0 auto;
+    width: 100%;
   }
 }
