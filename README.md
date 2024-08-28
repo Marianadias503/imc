@@ -1,5 +1,5 @@
 
-![Imagem do projeto ]()
+
 
 # Projeto realizado para uma cliente, utilizando HTML, CSS e JavaScript.
 
